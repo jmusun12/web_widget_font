@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="FieldFont">
+        <span t-att-class="'oe_form_field font-select '+widget.widget_class"
+            t-att-style="widget.attrs.style">
+            <input type="text" id="main"
+                t-att-tabindex="widget.attrs.tabindex"
+                t-att-autofocus="widget.attrs.autofocus"
+                t-att-placeholder="widget.attrs.placeholder"
+                t-att-maxlength="widget.field.size"
+                t-if="widget.mode !== 'readonly'"
+                name="fontselect"
+                disabled="disabled"
+                t-att-value = "widget.value or ''"
+                t-att-class="'font_picker o_input '+widget.widget_class"/>
+            <t t-else="">
+                <span class="oe_form_char_content"></span>
+            </t>
+        </span>
+    </t>
+</templates>
